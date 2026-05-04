@@ -1,0 +1,123 @@
+package TestBase;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+
+public class BaseClass {
+
+    public WebDriver driver;   // browser object (chrome/firefox/safari)
+    public Logger logger;      // logs for debugging steps
+    public Properties p;       // to read config.properties file
+   
+
+    // =========================================================
+    // BeforeClass - runs before starting test class
+    // =========================================================
+    @BeforeClass
+    @Parameters({"os","browser"})
+    public void setUp(String os,String br) throws IOException {
+
+        // Step 1: load config.properties file
+        FileReader file = new FileReader("./src/test/resources/config.properties");
+        p = new Properties();
+        p.load(file);
+
+        // Step 2: initialize logger (for logs)
+        logger = LogManager.getLogger(this.getClass());
+
+        // Step 3: open browser based on testng.xml parameter
+        switch(br.toLowerCase()) {
+
+            case "chrome":
+                driver = new ChromeDriver();  // open chrome
+                break;
+
+            case "firefox":
+                driver = new FirefoxDriver(); // open firefox
+                break;
+
+            case "safari":
+                driver = new SafariDriver();  // open safari
+                break;
+
+            default:
+                System.out.println("Invalid Browser");
+                return;
+        }
+
+        // Step 4: maximize browser window
+        driver.manage().window().maximize();
+
+        // Step 5: set implicit wait (for elements loading)
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        
+        // Step 6: open application URL from config file
+        driver.get(p.getProperty("appURL"));
+
+        // Step 7: delete cookies (fresh session start)
+        driver.manage().deleteAllCookies();
+    }
+ 
+       
+
+    // =========================================================
+    // AfterClass - runs after finishing all test methods
+    // =========================================================
+    @AfterClass
+    public void tearDown() {
+
+        if (driver !=null)
+        {
+            driver.quit();
+        }
+    }
+
+    // =========================================================
+    // generate random string (for test data)
+    // =========================================================
+    public String randomstring() {
+
+        @SuppressWarnings("deprecation")
+		String generatedstring = RandomStringUtils.randomAlphabetic(5);
+        return generatedstring;
+    }
+
+    // =========================================================
+    // generate random number (for test data)
+    // =========================================================
+    public String randomeNumber() {
+
+        @SuppressWarnings("deprecation")
+		String generatednumber = RandomStringUtils.randomNumeric(10);
+        return generatednumber;
+    }
+
+    // =========================================================
+    // generate random email-like value (for test data)
+    // =========================================================
+    public String randomeAlphaNumberic() {
+
+        @SuppressWarnings("deprecation")
+		String generatedstring = RandomStringUtils.randomAlphabetic(3);
+        @SuppressWarnings("deprecation")
+		String generatednumber = RandomStringUtils.randomNumeric(3);
+
+        return (generatedstring + "@" + generatednumber);
+    }
+}
