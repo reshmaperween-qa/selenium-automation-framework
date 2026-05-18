@@ -3,6 +3,10 @@
 
 <suite name="OpenCart" parallel="tests" thread-count="4">
 
+<listeners>
+<listener class-name="utilities.ExtentReportManager"/>
+</listeners>
+
   <test name="ChromeTest">
 
     <parameter name="os" value="mac"/>

@@ -65,16 +65,9 @@ public class TC003_LoginDDT extends BaseClass {
 
             if (exp.equalsIgnoreCase("Valid")) {
 
-                Assert.assertTrue(targetpage,
-                        "Valid login failed - My Account page not found");
-
-
+                Assert.assertTrue(targetpage,"Valid login failed - My Account page not found");
                 // 🔧 BEST FIX — Direct logout URL
-                driver.get(
-                        p.getProperty("appURL")
-                        + "index.php?route=account/logout"
-                );
-
+                driver.get(p.getProperty("appURL") + "index.php?route=account/logout" );
                 Thread.sleep(500);
 
                 // return to homepage

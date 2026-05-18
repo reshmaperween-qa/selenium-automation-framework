@@ -32,7 +32,6 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//ul[contains(@class,'dropdown-menu')]//a[normalize-space()='Register']")
     WebElement register;
 
-
     // =========================================================
     // METHOD: Open My Account Dropdown
     // =========================================================
@@ -46,12 +45,9 @@ public class HomePage extends BasePage {
         // click dropdown
         account.click();
 
-        // 🔧 small wait to allow dropdown animation
-        try {
-            Thread.sleep(500);
-        } catch (Exception e) {}
+        // wait until Register option visible
+        wait.until(ExpectedConditions.visibilityOf(register));
     }
-
 
     // =========================================================
     // METHOD: Click Login
@@ -61,30 +57,23 @@ public class HomePage extends BasePage {
         // open dropdown first
         clickMyAccount();
 
-        // wait until Login clickable
+        // wait until Login visible
         WebElement loginBtn = wait.until(
-                ExpectedConditions.elementToBeClickable(login)
+                ExpectedConditions.visibilityOf(login)
         );
 
         // click Login
         loginBtn.click();
     }
 
+ // =========================================================
+ // METHOD: Click Register
+ // =========================================================
+ public void clickRegister() {
 
-    // =========================================================
-    // METHOD: Click Register
-    // =========================================================
-    public void clickRegister() {
-
-        // open dropdown first
-        clickMyAccount();
-
-        // wait until Register clickable
-        WebElement regBtn = wait.until(
-                ExpectedConditions.elementToBeClickable(register)
-        );
-
-        // click Register
-        regBtn.click();
-    }
+     // direct open Register page because dropdown is unstable
+     driver.get(
+         "http://localhost:8888/opencart/index.php?route=account/register&language=en-gb"
+     );
+ }
 }

@@ -3,6 +3,10 @@
 
 <suite name="OpenCart Suite">
 
+<listeners>
+<listener class-name="utilities.ExtentReportManager"/>
+</listeners>
+
   <test name="Test">
 
     <parameter name="os" value="mac"/>

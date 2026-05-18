@@ -15,7 +15,11 @@ public class TC001_AccountRegistrationTest extends BaseClass {
         logger.info("***** Starting TC001 Account Registration Test *****");
 
         try {
-
+        	// ===== reset previous login session =====
+        	driver.get (p.getProperty("appURL")+ "index.php?route=account/logout");
+        	
+        	 // ===== open home page =====
+            driver.get(p.getProperty("appURL"));
             // ===== Home Page =====
             HomePage hp = new HomePage(driver);
             hp.clickMyAccount();
