@@ -60,6 +60,7 @@ public class ExtentReportManager implements ITestListener {
 		sparkReporter.config().setReportName("OpenCart Functional Testing");
 		// setting report theme dark
 		sparkReporter.config().setTheme(Theme.DARK);
+		sparkReporter.config().setTimelineEnabled(true);
 		// creating ExtentReports object
 		extent = new ExtentReports();
 		// attaching spark reporter to extent report
