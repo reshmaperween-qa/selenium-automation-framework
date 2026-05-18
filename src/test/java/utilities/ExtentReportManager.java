@@ -51,7 +51,7 @@ public class ExtentReportManager implements ITestListener {
 		repName = "Test-Report-" + timeStamp + ".html";
 
 		// report location path
-		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/" + repName);
+		sparkReporter = new ExtentSparkReporter("./reports/" + repName);
 
 		// report title shown in browser tab
 		sparkReporter.config().setDocumentTitle("OpenCart Automation Report");
