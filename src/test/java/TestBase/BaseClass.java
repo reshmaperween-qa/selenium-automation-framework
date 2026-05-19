@@ -127,13 +127,16 @@ public class BaseClass {
 
 		// screenshot save path
 		String timeStamp = String.valueOf(System.currentTimeMillis());
-
+		// generate unique timestamp
+	    // so every screenshot name will be different
+		  String screenshotName = testName + "_" + timeStamp + ".png";
+		  
+		  // final screenshot save path
+		    // screenshots will be stored inside reports folder
+		    // important for Jenkins + Extent Report
 		String targetFilePath = System.getProperty("user.dir")
-		        + "/screenshots/"
-		        + testName
-		        + "_"
-		        + timeStamp
-		        + ".png";
+				 + "/reports/screenshots/"
+		            + screenshotName;
 
 		try {
 
@@ -143,10 +146,15 @@ public class BaseClass {
 			// capture screenshot file temp
 			File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 
-			// target file
+			 // create target file object
 			File targetFile = new File(targetFilePath);
+			
+			 // create screenshots folder automatically
+	        // if folder does not exist
+			 targetFile.getParentFile().mkdirs();
 
-			// copy screenshot to folder
+			// copy screenshot from temp location
+		        // to final screenshots folder
 			FileUtils.copyFile(sourceFile, targetFile);
 
 			System.out.println("Screenshot saved at: " + targetFilePath);
@@ -155,9 +163,11 @@ public class BaseClass {
 
 		catch (Exception e) {
 
-			System.out.println("Screenshot capture failed");
+			 System.out.println("Screenshot capture failed: " + e.getMessage());
 
 		}
+		 // returning relative screenshot path
+	    // Extent Report uses this path to display image
 
 		return targetFilePath;
 	}
