@@ -78,3 +78,4 @@ QA Test Engineer | Manual & Automation Testing
 ## ⭐ Note
 This project demonstrates hands-on experience in automation testing using Selenium with real-time scenarios and framework design.
 
+Jenkins auto trigger test Wed May 20 00:44:55 +04 2026
