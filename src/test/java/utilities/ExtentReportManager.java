@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 // for handling test groups list
 import java.util.List;
+import com.aventstack.extentreports.MediaEntityBuilder;
 
 // TestNG listener interfaces
 import org.testng.ITestContext;
@@ -135,7 +136,8 @@ public class ExtentReportManager implements ITestListener {
 			String imgPath = base.captureScreen(result.getName());
 
 			// attaching screenshot into report
-			test.addScreenCaptureFromPath(imgPath);
+			test.fail("Screenshot of failure",
+			MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
 
 		}
 
