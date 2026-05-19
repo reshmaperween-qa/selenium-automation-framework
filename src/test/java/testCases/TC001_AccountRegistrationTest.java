@@ -9,69 +9,65 @@ import pageObjects.HomePage;
 
 public class TC001_AccountRegistrationTest extends BaseClass {
 
-    @Test(groups={"Regression","Master"})
-    public void verify_account_registration() {
+	@Test(groups = { "Regression", "Master" })
+	public void verify_account_registration() {
 
-        logger.info("***** Starting TC001 Account Registration Test *****");
+		logger.info("***** Starting TC001 Account Registration Test *****");
 
-        try {
-        	// ===== reset previous login session =====
-        	driver.get (p.getProperty("appURL")+ "index.php?route=account/logout");
-        	
-        	 // ===== open home page =====
-            driver.get(p.getProperty("appURL"));
-            // ===== Home Page =====
-            HomePage hp = new HomePage(driver);
-            hp.clickMyAccount();
-            logger.info("Clicking on MyAccount Link...");
-           
-            hp.clickRegister();   // handles dropdown internally
-            logger.info("Clicking Register...");
+		try {
+			// ===== reset previous login session =====
+			driver.get(p.getProperty("appURL") + "index.php?route=account/logout");
 
+			// ===== open home page =====
+			driver.get(p.getProperty("appURL"));
+			// ===== Home Page =====
+			HomePage hp = new HomePage(driver);
+			hp.clickMyAccount();
+			logger.info("Clicking on MyAccount Link...");
 
-            // ===== Registration Page =====
-            AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
+			hp.clickRegister(); // handles dropdown internally
+			logger.info("Clicking Register...");
 
-            logger.info("Entering user details...");
+			// ===== Registration Page =====
+			AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
 
-            String firstName = randomstring().toUpperCase();
-            String lastName = randomstring().toUpperCase();
-            String email = randomstring() + "@gmail.com";
-            String password = randomeAlphaNumberic();
+			logger.info("Entering user details...");
 
-            regpage.setFirstName(firstName);
-            regpage.setLastName(lastName);
-            regpage.setEmail(email);
-            regpage.setPassword(password);
+			String firstName = randomstring().toUpperCase();
+			String lastName = randomstring().toUpperCase();
+			String email = randomstring() + "@gmail.com";
+			String password = randomeAlphaNumberic();
 
-            logger.info("User details entered successfully");
+			regpage.setFirstName(firstName);
+			regpage.setLastName(lastName);
+			regpage.setEmail(email);
+			regpage.setPassword(password);
 
-            // ===== Submit form =====
-            regpage.clickAgree();
-            regpage.clickContinue();
-            logger.info("Form submitted");
-          
-            // ===== Confirmation message =====
-            String confmsg = regpage.getConfirmationMsg();
+			logger.info("User details entered successfully");
 
-            logger.info("Confirmation message: " + confmsg);
+			// ===== Submit form =====
+			regpage.clickAgree();
+			regpage.clickContinue();
+			logger.info("Form submitted");
 
-            // ===== Assertion =====
-            Assert.assertEquals(confmsg.trim(),"Failed Message",
-            		"Account registration failed - message mismatch" );
-               
-               
-                
-           
+			// ===== Confirmation message =====
+			String confmsg = regpage.getConfirmationMsg();
 
-            logger.info("ASSERTION PASSED ✔ Account created successfully");
+			logger.info("Confirmation message: " + confmsg);
 
-        } catch (Exception e) {
+			// ===== Assertion =====
 
-            logger.error("TEST FAILED DUE TO EXCEPTION ❌", e);
-            Assert.fail("Exception occurred: " + e.getMessage());
-        }
+			Assert.assertEquals(confmsg.trim(), "Your Account Has Been Created!",
+					"Account registration failed - message mismatch");
 
-        logger.info("***** Finished TC001 Account Registration Test *****");        
+			logger.info("ASSERTION PASSED ✔ Account created successfully");
+
+		} catch (Exception e) {
+
+			logger.error("TEST FAILED DUE TO EXCEPTION ❌", e);
+			Assert.fail("Exception occurred: " + e.getMessage());
+		}
+
+		logger.info("***** Finished TC001 Account Registration Test *****");
+	}
 }
-    }

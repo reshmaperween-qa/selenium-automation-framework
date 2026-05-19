@@ -44853,3 +44853,14 @@ Session ID: 9329c676407275dcf2c6dd7796350595
 22:27:58.101 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
 22:28:14.274 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
 22:28:20.119 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
+00:57:08.050 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+00:57:09.985 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+00:57:10.366 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+00:57:10.369 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+00:57:11.325 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+00:57:12.840 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+00:57:13.980 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+00:57:13.984 [main] INFO  testCases.TC001_AccountRegistrationTest - ASSERTION PASSED ✔ Account created successfully
+00:57:13.985 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
+00:57:28.199 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+00:57:33.964 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
