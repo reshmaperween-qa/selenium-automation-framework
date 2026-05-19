@@ -57,11 +57,12 @@ public class TC001_AccountRegistrationTest extends BaseClass {
             logger.info("Confirmation message: " + confmsg);
 
             // ===== Assertion =====
-            Assert.assertEquals(
-                confmsg.trim(),
-                "Your Account Has Been Created!",
-                "Account registration failed - message mismatch"
-            );
+            Assert.assertEquals(confmsg.trim(),"Failed Message",
+            		"Account registration failed - message mismatch" );
+               
+               
+                
+           
 
             logger.info("ASSERTION PASSED ✔ Account created successfully");
 

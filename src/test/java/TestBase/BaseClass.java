@@ -126,9 +126,14 @@ public class BaseClass {
 	public String captureScreen(String testName) {
 
 		// screenshot save path
-		String targetFilePath = System.getProperty("user.dir") + "/screenshots/" + testName
+		String timeStamp = String.valueOf(System.currentTimeMillis());
 
-				+ ".png";
+		String targetFilePath = System.getProperty("user.dir")
+		        + "/screenshots/"
+		        + testName
+		        + "_"
+		        + timeStamp
+		        + ".png";
 
 		try {
 
