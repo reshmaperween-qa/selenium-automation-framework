@@ -44835,3 +44835,21 @@ Session ID: 9329c676407275dcf2c6dd7796350595
 17:04:23.152 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
 17:04:38.234 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
 17:04:44.291 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
+18:08:58.029 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+18:08:59.810 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+18:09:00.192 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+18:09:00.196 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+18:09:01.144 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+18:09:02.766 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+18:09:03.963 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+18:09:19.505 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+18:09:25.548 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
+22:27:51.896 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+22:27:53.793 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+22:27:54.199 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+22:27:54.201 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+22:27:55.174 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+22:27:56.720 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+22:27:58.101 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+22:28:14.274 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+22:28:20.119 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****

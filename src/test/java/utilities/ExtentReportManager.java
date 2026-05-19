@@ -6,7 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 // for handling test groups list
 import java.util.List;
-import com.aventstack.extentreports.MediaEntityBuilder;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 // TestNG listener interfaces
 import org.testng.ITestContext;
@@ -16,6 +17,7 @@ import org.testng.ITestResult;
 // Extent Report classes
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 // Extent Spark Reporter (HTML report)
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -129,22 +131,17 @@ public class ExtentReportManager implements ITestListener {
 		// screenshot capture block
 		try {
 
-			// creating BaseClass object
-			BaseClass base = (BaseClass) result.getInstance();
+		    // capture screenshot in Base64 format
+		    String base64Screenshot =
+		            ((TakesScreenshot) BaseClass.driver).getScreenshotAs(OutputType.BASE64);
 
-			// capturing screenshot
-			String imgPath = base.captureScreen(result.getName());
+		    // attach Base64 screenshot into Extent Report
+		    test.fail("Screenshot of failure",
+		            MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).build());
 
-			// attaching screenshot into report
-			test.fail("Screenshot of failure",
-			MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+		} catch (Exception e) {
 
-		}
-
-		// exception handling
-		catch (Exception e) {
-
-			e.printStackTrace();
+		    e.printStackTrace();
 		}
 	}
 
