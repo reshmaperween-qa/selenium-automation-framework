@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-19T16:27:39 GMT+04:00" name="OpenCart Suite" finished-at="2026-05-19T16:28:24 GMT+04:00" duration-ms="45278">
+  <suite started-at="2026-05-19T17:03:58 GMT+04:00" name="OpenCart Suite" finished-at="2026-05-19T17:04:44 GMT+04:00" duration-ms="45573">
     <groups>
       <group name="Master">
         <method signature="TC001_AccountRegistrationTest.verify_account_registration()[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" name="verify_account_registration" class="testCases.TC001_AccountRegistrationTest"/>
@@ -15,9 +15,9 @@
         <method signature="TC001_AccountRegistrationTest.verify_account_registration()[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" name="verify_account_registration" class="testCases.TC001_AccountRegistrationTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-05-19T16:27:39 GMT+04:00" name="Test" finished-at="2026-05-19T16:28:24 GMT+04:00" duration-ms="45278">
+    <test started-at="2026-05-19T17:03:58 GMT+04:00" name="Test" finished-at="2026-05-19T17:04:44 GMT+04:00" duration-ms="45573">
       <class name="testCases.TC001_AccountRegistrationTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" started-at="2026-05-19T16:27:40 GMT+04:00" name="setUp" finished-at="2026-05-19T16:27:57 GMT+04:00" duration-ms="17222" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" started-at="2026-05-19T17:03:59 GMT+04:00" name="setUp" finished-at="2026-05-19T17:04:16 GMT+04:00" duration-ms="17484" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verify_account_registration()[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" started-at="2026-05-19T16:27:57 GMT+04:00" name="verify_account_registration" finished-at="2026-05-19T16:28:03 GMT+04:00" duration-ms="6152" status="FAIL">
+        <test-method signature="verify_account_registration()[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" started-at="2026-05-19T17:04:16 GMT+04:00" name="verify_account_registration" finished-at="2026-05-19T17:04:23 GMT+04:00" duration-ms="6316" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Account registration failed - message mismatch expected [Failed Message] but found [Your Account Has Been Created!]]]>
@@ -78,13 +78,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_account_registration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" started-at="2026-05-19T16:28:03 GMT+04:00" name="tearDown" finished-at="2026-05-19T16:28:04 GMT+04:00" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_AccountRegistrationTest@22fcf7ab]" started-at="2026-05-19T17:04:23 GMT+04:00" name="tearDown" finished-at="2026-05-19T17:04:23 GMT+04:00" duration-ms="163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC001_AccountRegistrationTest -->
       <class name="testCases.TC002_LoginPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC002_LoginPageTest@6913c1fb]" started-at="2026-05-19T16:28:04 GMT+04:00" name="setUp" finished-at="2026-05-19T16:28:18 GMT+04:00" duration-ms="14795" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC002_LoginPageTest@6913c1fb]" started-at="2026-05-19T17:04:23 GMT+04:00" name="setUp" finished-at="2026-05-19T17:04:38 GMT+04:00" duration-ms="14305" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -100,11 +100,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogin()[pri:0, instance:testCases.TC002_LoginPageTest@6913c1fb]" started-at="2026-05-19T16:28:18 GMT+04:00" name="verifyLogin" finished-at="2026-05-19T16:28:24 GMT+04:00" duration-ms="5793" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:testCases.TC002_LoginPageTest@6913c1fb]" started-at="2026-05-19T17:04:38 GMT+04:00" name="verifyLogin" finished-at="2026-05-19T17:04:44 GMT+04:00" duration-ms="6068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_LoginPageTest@6913c1fb]" started-at="2026-05-19T16:28:24 GMT+04:00" name="tearDown" finished-at="2026-05-19T16:28:24 GMT+04:00" duration-ms="211" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_LoginPageTest@6913c1fb]" started-at="2026-05-19T17:04:44 GMT+04:00" name="tearDown" finished-at="2026-05-19T17:04:44 GMT+04:00" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

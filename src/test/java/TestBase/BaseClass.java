@@ -169,6 +169,6 @@ public class BaseClass {
 		 // returning relative screenshot path
 	    // Extent Report uses this path to display image
 
-		return targetFilePath;
+		 return "screenshots/" + screenshotName;
 	}
 }
