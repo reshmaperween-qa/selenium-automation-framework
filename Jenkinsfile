@@ -1,16 +1,11 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven'
-        jdk 'JDK21'
-    }
-
     stages {
 
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/reshmaperween-qa/selenium-automation-framework.git'
+                git 'https://github.com/reshmaperween-qa/selenium-automation-framework.git'
             }
         }
 
@@ -24,12 +19,6 @@ pipeline {
             steps {
                 sh 'mvn test'
             }
-        }
-    }
-
-    post {
-        always {
-            echo 'Pipeline execution completed'
         }
     }
 }
