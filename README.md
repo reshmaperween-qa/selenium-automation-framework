@@ -21,6 +21,7 @@ The framework is designed to automate key user workflows such as login, registra
 ---
 
 ## 📂 Project Structure
+```text
 src/
 ├── test/java
 │   ├── pageObjects
@@ -33,7 +34,17 @@ reports/
 pom.xml
 grouping.xml
 
----
+✅ Features
+Automated Login & Registration Test Cases
+Data-Driven Testing using Excel
+Page Object Model (POM) Design
+Cross-browser testing support
+Test execution using TestNG XML
+Extent Report generation with timestamp
+Screenshot capture for failed test cases
+Log4j2 logging implementation
+Jenkins integration for CI execution
+
 
 ## ✅ Features
 - Automated Login & Registration Test Cases
@@ -46,7 +57,15 @@ grouping.xml
 - Log4j2 logging implementation
 - Jenkins integration for CI execution
 
----
+🧪 Test Scenarios Covered
+User Login with valid credentials
+User Login with invalid credentials
+User Registration
+Account Validation
+Data-driven Login Testing using Excel
+
+▶️ How to Run the Project
+Clone the repository: git clone https://github.com/reshmaperween-qa/selenium-automation-framework
 
 ## 🧪 Test Scenarios Covered
 - User Login with valid credentials
@@ -55,13 +74,38 @@ grouping.xml
 - Account Validation
 - Data-driven Login Testing using Excel
 
----
+Open the project in Eclipse or IntelliJ IDE
+Install dependencies using Maven:
+Right-click on project → Maven → Update Project
+Run test suite:
+Right-click on grouping.xml → Run As → TestNG Suite
+ 
+🔄 Jenkins CI Integration
+Jenkins is integrated with GitHub repository
+Poll SCM is configured to check new commits
+Maven is used to execute TestNG test suites
+Jenkins runs automation tests after code push
+Console Output is used to debug build failures
+Test results are recorded in Jenkins
+Extent Report is published in Jenkins after execution
 
-## ▶️ How to Run the Project
-1. Clone the repository:
-git clone https://github.com/reshmaperween-qa/selenium-automation-framework
 
-2. Open the project in Eclipse or IntelliJ IDE
+Jenkins Maven command:
+clean test -Dsurefire.suiteXmlFiles=grouping.xml
+
+📊 Reporting
+Extent Reports are generated with timestamp
+Reports are stored inside the reports folder
+Screenshots are captured for failed test cases
+Jenkins HTML Publisher plugin is used to view Extent Reports
+
+🛠️ Tools Used
+Eclipse IDE
+GitHub
+Jenkins
+Maven
+Chrome Browser
+
 
 3. Install dependencies using Maven:
 Right-click on project → Maven → Update Project
@@ -69,7 +113,16 @@ Right-click on project → Maven → Update Project
 4. Run test suite:
 Right-click on grouping.xml → Run As → TestNG Suite
 
----
+👩‍💻 Author
+Reshma Perween
+QA Test Engineer | Manual & Automation Testing
+
+📍 Dubai, UAE
+📧 reshmaperween0250@gmail.com
+
+
+⭐ Note
+
 
 ## 🔄 Jenkins CI Integration
 - Jenkins is integrated with GitHub repository
@@ -113,3 +166,6 @@ Email: reshmaperween0250@gmail.com
 
 ## ⭐ Note
 This project demonstrates hands-on experience in automation testing using Selenium WebDriver, TestNG, Maven, POM framework design, data-driven testing, Extent Reports, and Jenkins CI integration.
+
+This project demonstrates hands-on experience in automation testing using Selenium WebDriver, TestNG, Maven, POM framework design, data-driven testing, Extent Reports, and Jenkins CI integration.
+

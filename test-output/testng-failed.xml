@@ -13,13 +13,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testCases.TC001_AccountRegistrationTest">
+      <class name="testCases.TC002_LoginPageTest">
         <methods>
-          <include name="verify_account_registration"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- testCases.TC001_AccountRegistrationTest -->
+      </class> <!-- testCases.TC002_LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [OpenCart Suite] -->
