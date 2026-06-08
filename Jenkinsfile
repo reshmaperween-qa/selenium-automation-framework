@@ -5,7 +5,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/reshmaperween-qa/selenium-automation-framework.git'
+                git branch: 'main',
+                url: 'https://github.com/reshmaperween-qa/selenium-automation-framework.git'
             }
         }
 
@@ -17,7 +18,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn test -Dsurefire.suiteXmlFiles=grouping.xml'
             }
         }
     }
