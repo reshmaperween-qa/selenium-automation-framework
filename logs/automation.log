@@ -44884,3 +44884,67 @@ Session ID: 9329c676407275dcf2c6dd7796350595
 12:02:58.536 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
 12:03:09.761 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
 12:03:10.206 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+14:06:24.238 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+14:06:26.042 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+14:06:26.394 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+14:06:26.398 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+14:06:27.251 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+14:06:28.792 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+14:06:29.719 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+14:06:29.721 [main] INFO  testCases.TC001_AccountRegistrationTest - ASSERTION PASSED ✔ Account created successfully
+14:06:29.722 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
+14:06:39.104 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+14:02:05.075 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+14:02:05.086 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+14:02:05.092 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+14:02:05.636 [main] INFO  testCases.TC003_LoginDDT - **** START TC003_LoginDDT ****
+14:02:11.181 [main] INFO  testCases.TC003_LoginDDT - **** START TC003_LoginDDT ****
+14:02:13.842 [main] INFO  testCases.TC003_LoginDDT - **** END TC003_LoginDDT ****
+14:02:13.866 [main] INFO  testCases.TC003_LoginDDT - **** START TC003_LoginDDT ****
+14:02:15.453 [main] INFO  testCases.TC003_LoginDDT - **** END TC003_LoginDDT ****
+14:02:15.464 [main] INFO  testCases.TC003_LoginDDT - **** START TC003_LoginDDT ****
+14:02:18.363 [main] INFO  testCases.TC003_LoginDDT - **** END TC003_LoginDDT ****
+15:02:32.535 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+15:02:34.545 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+15:02:34.976 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+15:02:34.982 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+15:02:36.002 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+15:02:37.596 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+15:02:38.803 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+15:02:38.820 [main] INFO  testCases.TC001_AccountRegistrationTest - ASSERTION PASSED ✔ Account created successfully
+15:02:38.821 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
+15:02:52.756 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+15:02:58.846 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
+15:41:27.338 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+15:41:28.057 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+15:41:28.172 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+15:41:28.173 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+15:41:28.356 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+15:41:29.434 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+15:41:30.224 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+15:41:30.225 [main] INFO  testCases.TC001_AccountRegistrationTest - ASSERTION PASSED ✔ Account created successfully
+15:41:30.225 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
+15:41:33.000 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+15:41:35.661 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
+11:49:01.986 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+11:49:04.028 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+11:49:04.468 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+11:49:04.473 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+11:49:05.543 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+11:49:07.120 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+11:49:08.264 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+11:49:08.268 [main] INFO  testCases.TC001_AccountRegistrationTest - ASSERTION PASSED ✔ Account created successfully
+11:49:08.269 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
+11:49:23.496 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+11:49:29.805 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
+12:05:49.967 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Starting TC001 Account Registration Test *****
+12:05:50.386 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking on MyAccount Link...
+12:05:50.493 [main] INFO  testCases.TC001_AccountRegistrationTest - Clicking Register...
+12:05:50.494 [main] INFO  testCases.TC001_AccountRegistrationTest - Entering user details...
+12:05:50.654 [main] INFO  testCases.TC001_AccountRegistrationTest - User details entered successfully
+12:05:51.733 [main] INFO  testCases.TC001_AccountRegistrationTest - Form submitted
+12:05:52.449 [main] INFO  testCases.TC001_AccountRegistrationTest - Confirmation message: Your Account Has Been Created!
+12:05:52.450 [main] INFO  testCases.TC001_AccountRegistrationTest - ASSERTION PASSED ✔ Account created successfully
+12:05:52.451 [main] INFO  testCases.TC001_AccountRegistrationTest - ***** Finished TC001 Account Registration Test *****
+12:05:55.291 [main] INFO  testCases.TC002_LoginPageTest - ***** Starting TC002 Login Test *****
+12:05:57.893 [main] INFO  testCases.TC002_LoginPageTest - ***** Finished TC002 Login Test *****
