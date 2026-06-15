@@ -3,6 +3,11 @@ agent any
 
 
 stages {
+	      stage('Clean Reports') {
+    steps {
+        sh 'rm -rf reports'
+    }
+}
 
     stage('Checkout') {
         steps {
@@ -29,7 +34,7 @@ post {
         publishHTML([
             allowMissing: false,
             alwaysLinkToLastBuild: true,
-            keepAll: true,
+            keepAll: false,
             reportDir: 'reports',
             reportFiles: 'Test-Report*.html',
             reportName: 'Extent Report'
