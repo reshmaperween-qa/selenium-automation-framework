@@ -1,46 +1,46 @@
 pipeline {
-agent any
+    agent any
 
+    stages {
 
-stages {
-	      stage('Clean Reports') {
-    steps {
-        sh 'rm -rf reports'
-    }
-}
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/reshmaperween-qa/selenium-automation-framework.git'
+            }
+        }
 
-    stage('Checkout') {
-        steps {
-            git branch: 'main',
-            url: 'https://github.com/reshmaperween-qa/selenium-automation-framework.git'
+        stage('Build') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test -Dsurefire.suiteXmlFiles=grouping.xml'
+            }
         }
     }
 
-    stage('Build') {
-        steps {
-            sh 'mvn clean compile'
+    post {
+        always {
+            script {
+
+                def latestReport = sh(
+                    script: "ls -t reports/Test-Report*.html | head -1 | xargs basename",
+                    returnStdout: true
+                ).trim()
+
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'reports',
+                    reportFiles: latestReport,
+                    reportName: 'Extent Report'
+                ])
+            }
         }
     }
-
-    stage('Test') {
-        steps {
-            sh 'mvn test -Dsurefire.suiteXmlFiles=grouping.xml'
-        }
-    }
-}
-
-post {
-    always {
-        publishHTML([
-            allowMissing: false,
-            alwaysLinkToLastBuild: true,
-            keepAll: false,
-            reportDir: 'reports',
-            reportFiles: 'Test-Report*.html',
-            reportName: 'Extent Report'
-        ])
-    }
-}
-
-
 }
